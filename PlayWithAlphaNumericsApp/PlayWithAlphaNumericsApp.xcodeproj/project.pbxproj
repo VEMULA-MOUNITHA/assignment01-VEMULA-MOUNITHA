@@ -13,6 +13,7 @@
 		6391891E2AABEA1100EEF5DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6391891C2AABEA1100EEF5DF /* Main.storyboard */; };
 		639189202AABEA1200EEF5DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6391891F2AABEA1200EEF5DF /* Assets.xcassets */; };
 		639189232AABEA1200EEF5DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639189212AABEA1200EEF5DF /* LaunchScreen.storyboard */; };
+		6391894D2AAE730500EEF5DF /* PlayWithAlphaNumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6391894C2AAE730500EEF5DF /* PlayWithAlphaNumVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6391891F2AABEA1200EEF5DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		639189222AABEA1200EEF5DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639189242AABEA1200EEF5DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6391894C2AAE730500EEF5DF /* PlayWithAlphaNumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithAlphaNumVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				639189182AABEA1100EEF5DF /* SceneDelegate.swift */,
 				6391891A2AABEA1100EEF5DF /* ViewController.swift */,
 				6391891C2AABEA1100EEF5DF /* Main.storyboard */,
+				6391894C2AAE730500EEF5DF /* PlayWithAlphaNumVC.swift */,
 				6391891F2AABEA1200EEF5DF /* Assets.xcassets */,
 				639189212AABEA1200EEF5DF /* LaunchScreen.storyboard */,
 				639189242AABEA1200EEF5DF /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6391894D2AAE730500EEF5DF /* PlayWithAlphaNumVC.swift in Sources */,
 				6391891B2AABEA1100EEF5DF /* ViewController.swift in Sources */,
 				639189172AABEA1100EEF5DF /* AppDelegate.swift in Sources */,
 				639189192AABEA1100EEF5DF /* SceneDelegate.swift in Sources */,

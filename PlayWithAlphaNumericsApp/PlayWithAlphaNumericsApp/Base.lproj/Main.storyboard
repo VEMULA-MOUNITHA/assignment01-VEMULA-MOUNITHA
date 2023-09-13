@@ -12,7 +12,7 @@
         <!--Play With Alpha NumVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Play With Alpha NumVC" id="BYZ-38-t0r" customClass="ViewController" customModule="PlayWithAlphaNumericsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Play With Alpha NumVC" id="BYZ-38-t0r" customClass="PlayWithAlphaNumVC" customModule="PlayWithAlphaNumericsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,11 +20,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xmh-zE-cKH" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="79" width="353" height="719"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEP-wy-7ME">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEP-wy-7ME">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="72"/>
+                                        <color key="backgroundColor" red="0.0" green="0.40392156862745099" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6B5-bd-tBD" userLabel="PlayWithSV">
                                         <rect key="frame" x="0.0" y="80" width="353" height="31"/>
@@ -43,6 +46,9 @@
                                                         <subviews>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ns2-Zx-51I">
                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="numberSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="T1m-e3-r1N"/>
+                                                                </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-Rz-vQF">
                                                                 <rect key="frame" x="57.000000000000021" y="0.0" width="71.333333333333314" height="31"/>
@@ -55,8 +61,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="spG-z2-Htp" userLabel="StringsSV">
                                                         <rect key="frame" x="136.33333333333331" y="0.0" width="128.33333333333331" height="31"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7K-Ug-Paw">
+                                                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7K-Ug-Paw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="stringSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="kuh-uq-lTs"/>
+                                                                </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-ha-BcT">
                                                                 <rect key="frame" x="57.000000000000021" y="0.0" width="71.333333333333314" height="31"/>
@@ -88,8 +97,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-6d-Ttm">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-6d-Ttm" userLabel="First Num Stepper">
                                                 <rect key="frame" x="259" y="0.0" width="94" height="43"/>
+                                                <connections>
+                                                    <action selector="firstNumStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="WoS-3q-XH9"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -111,8 +123,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-bN-tFw">
+                                            <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-bN-tFw" userLabel="Second Num Stepper">
                                                 <rect key="frame" x="259" y="0.0" width="94" height="43.333333333333336"/>
+                                                <connections>
+                                                    <action selector="secondNumStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jbf-fU-D69"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -122,12 +137,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jks-i7-XNb" userLabel="StringsInputSV">
                                         <rect key="frame" x="0.0" y="221.33333333333331" width="353" height="143.66666666666669"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First string value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZC-il-h0h">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First string value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZC-il-h0h" userLabel="First Str InputTF">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="67.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second string value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-VA-1Dw">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second string value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-VA-1Dw" userLabel="Second Str InputTF">
                                                 <rect key="frame" x="0.0" y="75.666666666666686" width="353" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -143,18 +158,24 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Generate pattern" cornerStyle="capsule">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="generatePattern:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugq-vV-4uc"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCV-AV-khq">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCV-AV-khq">
                                                 <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="57.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Manipulate strings" cornerStyle="capsule"/>
+                                                <connections>
+                                                    <action selector="manipulateStrings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CfE-8R-0YG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FSS-hc-sLW" userLabel="MessageTV">
                                         <rect key="frame" x="0.0" y="438.66666666666657" width="353" height="236.33333333333331"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-Ip-yXr">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QaY-Ip-yXr">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="236.33333333333334"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -172,10 +193,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5X2-bn-WfR">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5X2-bn-WfR" userLabel="ResetBTN">
                                                 <rect key="frame" x="120.33333333333334" y="0.0" width="112.33333333333334" height="36"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Reset" cornerStyle="capsule"/>
+                                                <connections>
+                                                    <action selector="onReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdu-J1-hyv"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-ib-DYX">
                                                 <rect key="frame" x="240.66666666666671" y="0.0" width="112.33333333333334" height="36"/>
@@ -205,6 +229,20 @@
                             <constraint firstItem="xmh-zE-cKH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Nhg-gz-AlN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNumLBL" destination="tyb-gb-sbu" id="rG0-KL-2fY"/>
+                        <outlet property="firstStrTF" destination="NZC-il-h0h" id="T61-Qu-vAw"/>
+                        <outlet property="headerLBL" destination="SEP-wy-7ME" id="b4J-Lv-jzw"/>
+                        <outlet property="messageTV" destination="QaY-Ip-yXr" id="n3J-yL-vpd"/>
+                        <outlet property="secondNumLBL" destination="0GN-QX-FCM" id="8pX-ww-oSf"/>
+                        <outlet property="secondStrTF" destination="cKg-VA-1Dw" id="fKV-dL-fQR"/>
+                        <outletCollection property="optionsSWCH" destination="Ns2-Zx-51I" collectionClass="NSMutableArray" id="Pa3-U5-Awy"/>
+                        <outletCollection property="numbersStepper" destination="m4L-6d-Ttm" collectionClass="NSMutableArray" id="PMT-1J-mtF"/>
+                        <outletCollection property="numbersStepper" destination="aWG-bN-tFw" collectionClass="NSMutableArray" id="3mu-XU-jRx"/>
+                        <outletCollection property="stringAndPatternBTN" destination="JPV-B2-rxk" collectionClass="NSMutableArray" id="zfN-LI-2zT"/>
+                        <outletCollection property="stringAndPatternBTN" destination="dCV-AV-khq" collectionClass="NSMutableArray" id="f5c-fx-cdW"/>
+                        <outletCollection property="optionsSWCH" destination="B7K-Ug-Paw" collectionClass="NSMutableArray" id="ZJB-Qc-Ukc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
